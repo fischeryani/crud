@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+</head>
+<body>
+    <h1>Editar Producto</h1>
+    <form action="/update" method="POST">
+        <input type="hidden" name="product_id" value="<%= editProduct.id %>">
+        <div>
+            <label for="artículo">Artículo:</label>
+            <input type="text" name="artículo" value="<%= editProduct.artículo %>">
+        </div>
+        <div>
+            <label for="descripción">Descripción:</label>
+            <input type="text" name="descripción" value="<%= editProduct.descripción %>">
+        </div>
+        <div>
+            <label for="precio">Precio:</label>
+            <input type="text" name="precio" value="<%= editProduct.precio %>">
+        
+       
+</div>
+        <button type="submit">Guardar cambios</button>
+    </form>
+</body>
+</html>

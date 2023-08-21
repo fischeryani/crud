@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet"><meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>TIENDA GIORGIO ARMANI</title>
+
+    <link rel="stylesheet"type="text/css"href="/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" type="text/css" href="style_2.css">
+    <link rel="stylesheet" type="text/css" href="style_3.css">
+   
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_2.css">
+    <link rel="stylesheet" type="text/css" href="css/style_3.css">
+ </head> 
+<body>
+ <header>
+  <div>
+  <img src="img/logo.jpg.png" class="logo">
+ </div>
+
+  <div class="search-container">
+  <form action="/buscar" method="get">
+  <input type="text" name="busqueda" placeholder="Buscar...">
+  <i class="fas fa-search"></i>
+  </form>
+ </div><br>
+
+ <div class="mi-cuenta">
+    <i class="fas fa-user icon"></i>
+    <i class="fas fa-heart icon"></i>
+   <i class="fas fa-shopping-cart icon"></i>
+    </div><br>
+
+<H1>GIORGIO ARMANI</H1>
+   <nav>
+    <ul>
+          <ul class="lista-horizontal">
+            <li><a href="#">NUESTROS SERVICIOS</a></li>
+            <li><a href="#">REGISTRATE</a></li>
+            <li><a href="#">CONTACTANOS</a></li>
+            <li><a href="#">PUNTOS DE VENTA</a></li>
+          </ul> 
+   </nav>
+   
+    <p><h2>Colección para mujer ropa y accesorios. Descubre y encuentra tus fragancias favoritas. Estilo y distinción en todos nuestros productos.</h2></p>
+   </header>
+ 
+ <main>
+  <section> 
+  <div class="enlaces">
+      <a href="#">NOVEDADES</a>
+      <a href="#">PRENDAS</a>
+      <a href="#">CALZADO</a>
+      <a href="#">BOLSOS</a>
+      <a href="#">FRAGANCIAS</a>
+      <a href="#">MAQUILLAJE</a>
+      <a href="#">REGALOS</a>
+    </div>  
+</section>
+
+<p>COMPRAR POR CATEGORÍA</p> 
+
+<main>
+  <h1>Lista de Productos</h1>
+  <ul>
+      <% productos.forEach(producto => { %>
+          <li>
+            <img src="/img/<%= producto.img %>" /><br>
+            
+            <div>Artículo: <%= producto.artículo %></div><br>
+            <div>Descripción: <%= producto.descripción %></div><br>
+            <div>Precio: <%= producto.precio %></div><br>
+            <a href="/edit?id=<%= producto.id %>">Editar</a>
+            <br>   
+               </li>
+          <% }) %>
+  </ul>
+
+  
+
+ 
+
+
+
+
+
+</main>
+
+
+
+ </main>
+
+   <footer>
+
+
+    <div id="video-container">
+      <video src="MAKEUP.mp4" autoplay loop controls></video>
+    </div>
+
+   <DIv>
+   <ul class="lista-horizontal">
+    <li><a href="#">ATENCIÓN AL CLIENTE</a></li>
+    <li><a href="#">MI PEDIDO</a></li>
+    <li><a href="#">PAGOS</a></li>
+    <li><a href="#">ENVÍOS Y DEVOLUCIONES</a></li>
+  </ul>
+ </DIv><br>
+	<section id="metodos-pago">
+  <p>MÉTODOS DE PAGO</p><br>
+ <i class="fab fa-cc-visa icono"></i>
+ <i class="fab fa-cc-mastercard icono"></i>
+ <i class="fab fa-cc-amex icono"></i>
+ <i class="fab fa-cc-jcb icono"></i>
+ <i class="fab fa-cc-discover icono"></i>
+ <i class="fab fa-cc-paypal icono"></i>
+ </section><br>
+
+  <section id="redes">
+  <p>FOLLOW US</p><br>
+	<footer id="mi-footer"></footer>
+	<i class="fab fa-facebook-square icono"></i> 
+	<i class="fab fa-instagram icono"></i>
+  </section>
+
+
+
+
+<div class="links">
+<p><a href="terminosgeneralesdeventa.html">Términos generales de venta</a></p>
+<p><a href="terminosycondiciones.html">Términos y condiciones</a></p>
+<p><a href="mapadelsitio.html">Mapa del sitio</a></p>
+<p><a href="politicadeprivacidad.html">Política de privacidad</a></p> 
+</div>
+
+ <footer>Copyright © 2023 Giorgio Armani S.p.A.</footer><br>
+</footer>
+<a href="/create">Creación de Productos</a>
+
+</body>
+</html>
+

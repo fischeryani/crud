@@ -1,0 +1,22 @@
+/* Responsive Tablet */
+@media (min-width: 501px) {
+    .product-container {
+      width: 40%;
+      height: 330px;
+      padding: 5px;
+      margin: auto;
+      margin-bottom: 38%;
+      margin-top: 10px;
+    }
+  }
+  
+  .product-container .precio {
+    font-weight: bold;
+  }
+
+  .contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  

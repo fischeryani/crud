@@ -1,0 +1,50 @@
+ /* Responsive Compu */
+ @media (min-width: 801px) {
+    .contenedor-articulos {
+      display: flexbox;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .product-container {
+      width:  calc(25% - 10px);
+      height: auto;
+      padding: 4px;
+      }
+  
+     .product-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: auto;
+      }
+  
+  .product-container img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    }
+  
+  .product-container h2 {
+    margin-top: 10px;
+  }
+  
+  .product-container p {
+    margin-bottom: 10px;
+  }
+  
+  .product-container .precio {
+    font-weight: bold;
+  }
+  
+  .product-container .boton {
+    margin-top: 10px;
+  }
+
+  .contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+  }
