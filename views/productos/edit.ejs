@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Producto</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_4.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_4.css">
 </head>
 <body>
 
@@ -12,29 +19,50 @@
         <a href="/">HOME</a>
     </div><br>
 
-
     <h1>Editar Producto</h1>
-    <form action="/update" method="POST">
+    <form action="/update" method="POST" id="edit-form">
         <input type="hidden" name="product_id" value="<%= editProduct.id %>">
         <div>
             <label for="artículo">Artículo:</label>
-            <input type="text" name="artículo" value="<%= editProduct.artículo %>">
+            <input type="text" id="artículo" name="artículo" value="<%= editProduct.artículo %>">
         </div>
         <div>
             <label for="descripción">Descripción:</label>
-            <input type="text" name="descripción" value="<%= editProduct.descripción %>">
+            <input type="text" id="descripción" name="descripción" value="<%= editProduct.descripción %>">
         </div>
         <div>
             <label for="precio">Precio:</label>
-            <input type="text" name="precio" value="<%= editProduct.precio %>">
-        
+            <input type="text" id="precio" name="precio" value="<%= editProduct.precio %>">
             <br>
             <div>
                 <input type="file" name="image">
             </div>
-
-</div>
+        </div>
+        <div>
         <button type="submit">Guardar cambios</button>
+    </div>
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#edit-form').submit(function (e) {
+                e.preventDefault(); // Evita el envío normal del formulario
+    
+                $.ajax({
+                    type: 'POST',
+                    url: '/update',
+                    data: $('#edit-form').serialize(),
+                    success: function () {
+                        // Recargar la página después de la actualización
+                        location.reload();
+                    },
+                    error: function () {
+                        // Maneja errores si es necesario
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

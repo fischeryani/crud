@@ -6,7 +6,8 @@ router.get('/', productosController.list);
 router.get("/create", productosController.create)
 router.post("/create", productosController.stock)
 
-router.get('/edit', productosController.edit);
-router.post('/update', productosController.update);
+// Utiliza el formato correcto para capturar el ID en la URL
+router.get('/edit/:id', productosController.edit); 
+router.patch('/update/:id', productosController.update); // Cambia la ruta para la actualización
 
-module.exports = router; 
+module.exports = router;
