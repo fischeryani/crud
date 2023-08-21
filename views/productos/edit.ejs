@@ -7,6 +7,12 @@
     <title>Editar Producto</title>
 </head>
 <body>
+
+    <div>
+        <a href="/">HOME</a>
+    </div><br>
+
+
     <h1>Editar Producto</h1>
     <form action="/update" method="POST">
         <input type="hidden" name="product_id" value="<%= editProduct.id %>">
@@ -22,7 +28,11 @@
             <label for="precio">Precio:</label>
             <input type="text" name="precio" value="<%= editProduct.precio %>">
         
-       
+            <br>
+            <div>
+                <input type="file" name="image">
+            </div>
+
 </div>
         <button type="submit">Guardar cambios</button>
     </form>

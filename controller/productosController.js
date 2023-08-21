@@ -38,28 +38,27 @@ const productosController = {
         res.render("productos/edit", { editProduct: productToEdit });
     },
 
-    update: (req, res) => {
-        const productId = req.body.product_id; // Obtener el ID del producto del cuerpo de la solicitud
+     update: (req, res) => {
+        const productId = parseInt(req.body.product_id); // Parsear el ID del producto a entero
         const { artículo, descripción, precio, img } = req.body;
 
-        // Encontrar el producto a editar en el array de productos
-        const productToEdit = productos.find(product => product.id === parseInt(productId));
-
-        if (!productToEdit) {
-            return res.status(404).send("Producto no encontrado");
-        }
-
-        // Actualizar los datos del producto
-        productToEdit.artículo = artículo;
-        productToEdit.descripción = descripción;
-        productToEdit.precio = precio;
-        // Actualizar la imagen si se proporciona
-        if (req.file) {
-            productToEdit.img = req.file.filename;
-        }
+        // Utilizar map para crear un nuevo array de productos con el producto actualizado
+        const nuevosProductos = productos.map(producto => {
+            if (producto.id === productId) {
+                return {
+                    ...producto,
+                    artículo,
+                    descripción,
+                    precio,
+                    img: req.file ? req.file.filename : producto.img
+                };
+            } else {
+                return producto;
+            }
+        });
 
         // Guardar los cambios en el archivo JSON
-        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
+        fs.writeFileSync(productosFilePath, JSON.stringify(nuevosProductos, null, 2)); // Utiliza writeFileSync para asegurar la escritura sincrónica
 
         res.redirect("/");
     }
