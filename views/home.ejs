@@ -77,7 +77,7 @@
             <div>Artículo: <%= producto.artículo %></div><br>
             <div>Descripción: <%= producto.descripción %></div><br>
             <div>Precio: <%= producto.precio %></div><br>
-            <a href="/edit?id=<%= producto.id %>">Editar</a>
+            <a href="/edit?id=<%= producto.id %>" class="edit-link">Editar</a>
             <br>   
                </li>
           <% }) %>
@@ -141,7 +141,7 @@
 
  <footer>Copyright © 2023 Giorgio Armani S.p.A.</footer><br>
 </footer>
-<a href="/create">Creación de Productos</a>
+<a href="/create" class="create-link">Creación de Productos</a>
 
 </body>
 </html>

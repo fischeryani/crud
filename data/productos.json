@@ -45,7 +45,7 @@
     "id": 7,
     "artículo": "BECAUSE IT’S YOU",
     "descripción": "Una fragancia romántica y jovial",
-    "precio": "$ 190.000",
+    "precio": "$ 190.999",
     "img": "fragancia.jpg.jpg"
   },
   {
@@ -80,14 +80,14 @@
     "id": 12,
     "artículo": "LUMINOUS SILK GLOW FUSION POWDER",
     "descripción": "Polvo fijador ligero con acabado radiante y natural",
-    "precio": "$ 4.777",
+    "precio": "$ 4.700",
     "img": "maquillaje.jpg.png"
   },
   {
     "id": 13,
-    "artículo": "Lápiz ",
-    "descripción": "tinta ",
-    "precio": "897",
+    "artículo": "Lápiz Labial ",
+    "descripción": "Tinta que no se corre ",
+    "precio": "$ 9.300",
     "img": "default-image.png"
   }
 ]
