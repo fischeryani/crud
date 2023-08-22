@@ -10,4 +10,8 @@ router.post("/create", productosController.stock)
 router.get('/edit/:id', productosController.edit); 
 router.patch('/update/:id', productosController.update); // Cambia la ruta para la actualización
 
+
+
+router.post('/delete/:id', productosController.destroy);
+
 module.exports = router;

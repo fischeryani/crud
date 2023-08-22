@@ -64,7 +64,31 @@ const productosController = {
         console.log('Cambios guardados:', productToEdit); // Agrega este console.log para verificar
     
         res.redirect("/");
-    }
-};
+    },
 
+
+    
+    destroy: (req, res) => {
+        try {
+            const id = req.params.id;
+    
+            // Leer los productos existentes
+            const products = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+    
+            // Filtrar los productos eliminando el que tenga el ID proporcionado
+            const finalProducts = products.filter(producto => producto.id != id);
+    
+            // Escribir los productos actualizados en el archivo
+            fs.writeFileSync(productosFilePath, JSON.stringify(finalProducts, null, ' '));
+    
+            console.log('Producto eliminado:', id); // Agrega este mensaje para verificar que se esté ejecutando correctamente
+    
+            res.redirect('/');
+        } catch (error) {
+            console.error('Error al eliminar el producto:', error);
+            res.status(500).send('Error al eliminar el producto');
+        }
+    
+    }
+}
 module.exports = productosController;

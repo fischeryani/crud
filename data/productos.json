@@ -1,93 +1,86 @@
 [
-  {
-    "id": 1,
-    "artículo": "CHAQUETA DAMA ",
-    "descripción": "Chaqueta de abotonadura sencilla en tejido de mezcla de seda y lino",
-    "precio": "$ 85.999",
-    "img": "imagen1.png.jpg"
-  },
-  {
-    "id": 2,
-    "artículo": "VESTIDO",
-    "descripción": "Vestido corto de seda con bordado de cristales",
-    "precio": "$ 125.000",
-    "img": "imagen9.png.png"
-  },
-  {
-    "id": 3,
-    "artículo": "BLUSA DAMA",
-    "descripción": "Blusa de seda con cremallera",
-    "precio": "$ 28.000",
-    "img": "blusa.jpg.jpg"
-  },
-  {
-    "id": 4,
-    "artículo": "SANDALIA",
-    "descripción": "Sandalia de tacón",
-    "precio": "$ 45.000",
-    "img": "imagen6.png.jpg"
-  },
-  {
-    "id": 5,
-    "artículo": "PANTALONES DAMA",
-    "descripción": "Pantalones rectos de raso doble de seda",
-    "precio": "$ 40.000",
-    "img": "imagen3.png.jpg"
-  },
-  {
-    "id": 6,
-    "artículo": "BOLSO",
-    "descripción": "Mini bolso Armani",
-    "precio": "$ 50.000",
-    "img": "imagen5.png.jpg"
-  },
-  {
-    "id": 7,
-    "artículo": "BECAUSE IT’S YOU",
-    "descripción": "Una fragancia romántica y jovial",
-    "precio": "$ 190.999",
-    "img": "fragancia.jpg.jpg"
-  },
-  {
-    "id": 8,
-    "artículo": "BOTAS",
-    "descripción": "Botas de napa",
-    "precio": "$ 130.000",
-    "img": "botines.jpg.jpg"
-  },
-  {
-    "id": 9,
-    "artículo": "BOLSO",
-    "descripción": "Bolso shopper con acabado graneado y colgante ",
-    "precio": "$ 55.000",
-    "img": "Bolso_shopper.jpg.png"
-  },
-  {
-    "id": 10,
-    "artículo": "RELOJ",
-    "descripción": "Reloj de acero inoxidable en tono rosa dorado de dos manecillas",
-    "precio": "$ 150.000",
-    "img": "reloj.jpg.png"
-  },
-  {
-    "id": 11,
-    "artículo": "CAMISA",
-    "descripción": "Camisa de gasa de lino",
-    "precio": "$ 80.900",
-    "img": "CAMISA.jpg.png"
-  },
-  {
-    "id": 12,
-    "artículo": "LUMINOUS SILK GLOW FUSION POWDER",
-    "descripción": "Polvo fijador ligero con acabado radiante y natural",
-    "precio": "$ 4.700",
-    "img": "maquillaje.jpg.png"
-  },
-  {
-    "id": 13,
-    "artículo": "Lápiz Labial ",
-    "descripción": "Tinta que no se corre ",
-    "precio": "$ 9.300",
-    "img": "default-image.png"
-  }
+ {
+  "id": 1,
+  "artículo": "CHAQUETA DAMA ",
+  "descripción": "Chaqueta de abotonadura sencilla en tejido de mezcla de seda y lino",
+  "precio": "$ 85.999",
+  "img": "imagen1.png.jpg"
+ },
+ {
+  "id": 2,
+  "artículo": "VESTIDO",
+  "descripción": "Vestido corto de seda con bordado de cristales",
+  "precio": "$ 125.000",
+  "img": "imagen9.png.png"
+ },
+ {
+  "id": 3,
+  "artículo": "BLUSA DAMA",
+  "descripción": "Blusa de seda con cremallera",
+  "precio": "$ 28.000",
+  "img": "blusa.jpg.jpg"
+ },
+ {
+  "id": 4,
+  "artículo": "SANDALIA",
+  "descripción": "Sandalia de tacón",
+  "precio": "$ 45.000",
+  "img": "imagen6.png.jpg"
+ },
+ {
+  "id": 5,
+  "artículo": "PANTALONES DAMA",
+  "descripción": "Pantalones rectos de raso doble de seda",
+  "precio": "$ 40.000",
+  "img": "imagen3.png.jpg"
+ },
+ {
+  "id": 6,
+  "artículo": "BOLSO",
+  "descripción": "Mini bolso Armani",
+  "precio": "$ 50.000",
+  "img": "imagen5.png.jpg"
+ },
+ {
+  "id": 7,
+  "artículo": "BECAUSE IT’S YOU",
+  "descripción": "Una fragancia romántica y jovial",
+  "precio": "$ 190.999",
+  "img": "fragancia.jpg.jpg"
+ },
+ {
+  "id": 8,
+  "artículo": "BOTAS",
+  "descripción": "Botas de napa",
+  "precio": "$ 130.000",
+  "img": "botines.jpg.jpg"
+ },
+ {
+  "id": 9,
+  "artículo": "BOLSO",
+  "descripción": "Bolso shopper con acabado graneado y colgante ",
+  "precio": "$ 55.000",
+  "img": "Bolso_shopper.jpg.png"
+ },
+ {
+  "id": 10,
+  "artículo": "RELOJ",
+  "descripción": "Reloj de acero inoxidable en tono rosa dorado de dos manecillas",
+  "precio": "$ 150.000",
+  "img": "reloj.jpg.png"
+ },
+ {
+  "id": 11,
+  "artículo": "CAMISA",
+  "descripción": "Camisa de gasa de lino",
+  "precio": "$ 80.900",
+  "img": "CAMISA.jpg.png"
+ },
+ {
+  "id": 12,
+  "artículo": "LUMINOUS SILK GLOW FUSION POWDER",
+  "descripción": "Polvo fijador ligero con acabado radiante y natural",
+  "precio": "$ 4.700",
+  "img": "maquillaje.jpg.png"
+ }
 ]

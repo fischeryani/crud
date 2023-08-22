@@ -14,29 +14,27 @@
     <link rel="stylesheet" type="text/css" href="css/style_4.css">
 </head>
 <body>
-
-    
     <header>
-
         <div>
             <img src="/img/logo.jpg.png" class="logo">
-           </div>
+        
+        </div
+
+        </
+</div>
           
-           <div class="search-container">
+        <div class="search-container">
             <form action="/buscar" method="get">
-            <input type="text" name="busqueda" placeholder="Buscar...">
-            <i class="fas fa-search"></i>
+                <input type="text" name="busqueda" placeholder="Buscar...">
+                <i class="fas fa-search"></i>
             </form>
-           </div><br>
+        </div><br>
           
-           <div class="mi-cuenta">
-              <i class="fas fa-user icon"></i>
-              <i class="fas fa-heart icon"></i>
-             <i class="fas fa-shopping-cart icon"></i>
-              </div><br>
-
-
-
+        <div class="mi-cuenta">
+            <i class="fas fa-user icon"></i>
+            <i class="fas fa-heart icon"></i>
+            <i class="fas fa-shopping-cart icon"></i>
+        </div><br>
         <h1>GIORGIO ARMANI</h1>
     </header>
 
@@ -64,22 +62,47 @@
             </div>
         </div>
         <div>
-        <button type="submit">Guardar cambios</button>
-    </div>
+            <button type="submit">Guardar cambios</button>
+        </div>
     </form>
 
+    <form action="/delete/<%= editProduct.id %>" method="POST" id="delete-form">
+        <input type="hidden" name="_method" value="DELETE"><br>
+        <button type="submit" style="color: red;">Eliminar Producto</button>
+    </form>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
+            $('#delete-form').submit(function (e) {
+                e.preventDefault();
+                if (confirm('¿Estás seguro de que dese
+
+        $(document).ready(function () {
+            $('#delete-form').submit(function (e) {
+                e.preventDefault();
+                if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '/delete/<%= editProduct.id %>',
+                        data: $(this).serialize(),
+                        success: function () {
+                            window.location.href = '/';
+                        },
+                        error: function () {
+                            // Maneja errores si es necesario
+                        }
+                    });
+                }
+            });
+
             $('#edit-form').submit(function (e) {
-                e.preventDefault(); // Evita el envío normal del formulario
-    
+                e.preventDefault();
                 $.ajax({
                     type: 'POST',
                     url: '/update',
                     data: $('#edit-form').serialize(),
                     success: function () {
-                        // Recargar la página después de la actualización
                         location.reload();
                     },
                     error: function () {
@@ -90,58 +113,55 @@
         });
     </script>
 
-
-<
-
-<footer>
-
-    <h2>DESCUBRA ARMANI/PRIVÉ</h2>
+    <footer>
+    
+        <h2>DESCUBRA ARMANI/PRIVÉ</h2>
     <p>La expresión olfativa del sueño de alta costura.</p> 
     
     <div id="video-container">
         <video src="ARMANI _ PRIVÉ.mp4" autoplay loop controls></video>
       </div>
-
-
-    <DIv>
-    <ul class="lista-horizontal">
-     <li><a href="#">ATENCIÓN AL CLIENTE</a></li>
-     <li><a href="#">MI PEDIDO</a></li>
-     <li><a href="#">PAGOS</a></li>
-     <li><a href="#">ENVÍOS Y DEVOLUCIONES</a></li>
-   </ul>
-  </DIv><br>
-     <section id="metodos-pago">
-   <p>MÉTODOS DE PAGO</p><br>
-  <i class="fab fa-cc-visa icono"></i>
-  <i class="fab fa-cc-mastercard icono"></i>
-  <i class="fab fa-cc-amex icono"></i>
-  <i class="fab fa-cc-jcb icono"></i>
-  <i class="fab fa-cc-discover icono"></i>
-  <i class="fab fa-cc-paypal icono"></i>
-  </section><br>
- 
-   <section id="redes">
-   <p>FOLLOW US</p><br>
-     <footer id="mi-footer"></footer>
-     <i class="fab fa-facebook-square icono"></i>
-     <i class="fab fa-instagram icono"></i>
- 
-     
-  </section><br>
-
-
-  <div class="links">
-    <p><a href="terminosgeneralesdeventa.html">Términos generales de venta</a></p>
-    <p><a href="terminosycondiciones.html">Términos y condiciones</a></p>
-    <p><a href="mapadelsitio.html">Mapa del sitio</a></p>
-    <p><a href="politicadeprivacidad.html">Política de privacidad</a></p> 
-    </div>
     
+    
+        <DIv>
+        <ul class="lista-horizontal">
+         <li><a href="#">ATENCIÓN AL CLIENTE</a></li>
+         <li><a href="#">MI PEDIDO</a></li>
+         <li><a href="#">PAGOS</a></li>
+         <li><a href="#">ENVÍOS Y DEVOLUCIONES</a></li>
+       </ul>
+      </DIv><br>
+         <section id="metodos-pago">
+       <p>MÉTODOS DE PAGO</p><br>
+      <i class="fab fa-cc-visa icono"></i>
+      <i class="fab fa-cc-mastercard icono"></i>
+      <i class="fab fa-cc-amex icono"></i>
+      <i class="fab fa-cc-jcb icono"></i>
+      <i class="fab fa-cc-discover icono"></i>
+      <i class="fab fa-cc-paypal icono"></i>
+      </section><br>
+     
+       <section id="redes">
+       <p>FOLLOW US</p><br>
+         <footer id="mi-footer"></footer>
+         <i class="fab fa-facebook-square icono"></i>
+         <i class="fab fa-instagram icono"></i>
+     
+         
+      </section><br>
+    
+    
+      <div class="links">
+        <p><a href="terminosgeneralesdeventa.html">Términos generales de venta</a></p>
+        <p><a href="terminosycondiciones.html">Términos y condiciones</a></p>
+        <p><a href="mapadelsitio.html">Mapa del sitio</a></p>
+        <p><a href="politicadeprivacidad.html">Política de privacidad</a></p> 
+        </div>
+        
+    
+       <footer>Copyright © 2023 Giorgio Armani S.p.A.</footer><br>
 
-   <footer>Copyright © 2023 Giorgio Armani S.p.A.</footer><br>
-  </footer>
 
-
+    </footer>
 </body>
 </html>
