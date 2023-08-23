@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+const multer = require('multer');
 
 const productosController = {
     list: (req, res) => {
@@ -53,6 +54,7 @@ const productosController = {
         productToEdit.artículo = artículo;
         productToEdit.descripción = descripción;
         productToEdit.precio = precio;
+        productToEdit.img = img;
         // Actualiza la imagen si se proporciona
         if (req.file) {
             productToEdit.img = req.file.filename;

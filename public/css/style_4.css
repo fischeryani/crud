@@ -87,4 +87,14 @@
       button[type="submit"] {
         font-size: 15px; 
         padding: 10px 20px; /* Espacio interno (arriba y abajo, izquierda y derecha) */
+        background-color: black; /* Fondo negro */
+        color: white;
+        border: 2px solid white;
+      }
+
+      .enlace-verde {
+        font-size: 24px;
+        text-decoration: none;
+        color: blue; 
+        
     }
