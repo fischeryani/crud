@@ -16,7 +16,7 @@ const productosController = {
     stock: (req, res) => {
         const { artículo, descripción, precio, img } = req.body;
         const nuevoProduct = {
-            id: productos.length + 1,
+            id: productos.length + 2,
             artículo,
             descripción,
             precio,
@@ -39,10 +39,13 @@ const productosController = {
         res.render("productos/edit", { editProduct: productToEdit });
     },
 
+   
+
+
     update: (req, res) => {
         const productId = parseInt(req.body.product_id); // Parsear el ID del producto a entero
         const { artículo, descripción, precio, img } = req.body;
-    
+        
         // Encuentra el producto a actualizar en el array de productos
         const productToEdit = productos.find(producto => producto.id === productId);
     
@@ -50,23 +53,46 @@ const productosController = {
             return res.status(404).send("Producto no encontrado");
         }
     
-        // Actualiza los datos del producto
-        productToEdit.artículo = artículo;
-        productToEdit.descripción = descripción;
-        productToEdit.precio = precio;
-        productToEdit.img = img;
-        // Actualiza la imagen si se proporciona
-        if (req.file) {
-            productToEdit.img = req.file.filename;
-        }
+        // Encuentra el índice del producto a actualizar en el array de productos
+        
+       
+    const productIndex = productos.findIndex(producto => producto.id === productId);
+    
+        // Encuentra el último ID existente en la lista de productos
+        
+       
+    const lastProductId = productos.reduce((maxId, producto) => Math.max(maxId, producto.id), 0);
+    
+        // Generar una nueva ID única para el producto editado
+        const newProductId = lastProductId + 1;
+    
+        // Crear un nuevo objeto con la nueva ID y los datos actualizados
+        const updatedProduct = {
+            
+            
+    id: newProductId,
+            artículo,
+            descripción,
+            precio,
+            img
+        };
+    
+        
+            artículo,
+    // Reemplazar el producto original en la lista de productos
+        productos.splice(productIndex, 1, updatedProduct);
     
         // Guarda los cambios en el archivo JSON
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2));
     
-        console.log('Cambios guardados:', productToEdit); // Agrega este console.log para verificar
+        console.log('Cambios guardados:', updatedProduct); // Agrega este console.log para verificar
     
         res.redirect("/");
     },
+
+
+
+
 
 
     
